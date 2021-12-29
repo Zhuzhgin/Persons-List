@@ -11,15 +11,6 @@ class FullInfoTableViewController: UITableViewController {
 
     var personsArray: [Person]!
 
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print(personsArray.count)
-       
-    }
-
-    // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         personsArray.count
     }
@@ -34,16 +25,12 @@ class FullInfoTableViewController: UITableViewController {
         return fullName
     }
     
-    
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         2
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
-        
-       // print(indexPath.row)
         let person = personsArray[indexPath.section ]
         var content = cell.defaultContentConfiguration()
         
@@ -52,7 +39,6 @@ class FullInfoTableViewController: UITableViewController {
         default: content.text = person.eMail
         }
         cell.contentConfiguration = content
-        
         return cell
     }
 }
