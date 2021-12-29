@@ -20,17 +20,22 @@ class MainTabBarController: UITabBarController {
         let viewControllers = self.viewControllers!
         
         //цикл по архиву VC табконтроллера
+        
+        
         for viewController in viewControllers {
             
-            if let fullInfoVC = viewController as? FullInfoTableViewController{
-                            fullInfoVC.personsArray = personsArray
-                        }
-            if let navigationVC = viewController as? UINavigationController {
-                guard  let personNamesVC  = navigationVC.topViewController as? PersonsNamesTableViewController else {return}
+            
+            guard let navigationVC = viewController as? UINavigationController else {return}
+            
+            
+            if let personNamesVC  = navigationVC.topViewController as? PersonsNamesTableViewController {
                 personNamesVC.personsArray = personsArray
+                
+            } else {
+                guard let fullInfoVC = navigationVC.topViewController as? FullInfoTableViewController else {return}
+                fullInfoVC.personsArray = personsArray
             }
             
-            
         }
-}
+    }
 }
