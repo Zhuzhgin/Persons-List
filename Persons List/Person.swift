@@ -16,6 +16,8 @@ struct Person: Hashable {
     
     static func returnArrayOfPersons() -> [Person] {
         var setOfPersons = Set<Person>()
+        var setOfEmails = Set<String>()
+        var setOfPhones = Set<String>()
         var finalArrayOfPersons: [Person] = []
         
         let maxIndexOfPersons = DataManager.shared.names.count - 1
@@ -26,16 +28,22 @@ struct Person: Hashable {
             let indexOfEmails = Int.random(in: 0...maxIndexOfPersons)
             let indexOfPhones = Int.random(in: 0...maxIndexOfPersons)
             
-            let person = Person(name: DataManager.shared.names[indexOfNames], surName: DataManager.shared.surnames[indexOfSurnames], eMail: DataManager.shared.emails[indexOfEmails], phone: DataManager.shared.phones[indexOfPhones])
+            let person = Person(
+                name: DataManager.shared.names[indexOfNames],
+                surName: DataManager.shared.surnames[indexOfSurnames],
+                eMail: DataManager.shared.emails[indexOfEmails],
+                phone: DataManager.shared.phones[indexOfPhones])
             
-            if setOfPersons.contains(person) {
-                print("Person \(person.name), \(person.surName) уже есть в контактах ")
-                continue
-            }
-            else {
-                setOfPersons.insert(person)
-                finalArrayOfPersons.append(person)
-            }
+            guard !setOfPersons.contains(person) else {continue}
+            guard !setOfEmails.contains(person.eMail) else {continue}
+            guard !setOfPhones.contains(person.phone) else {continue}
+            
+            
+            setOfPersons.insert(person)
+            setOfEmails.insert(person.eMail)
+            setOfPhones.insert(person.phone)
+            finalArrayOfPersons.append(person)
+            
         }
         return finalArrayOfPersons
     }

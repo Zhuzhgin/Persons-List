@@ -24,13 +24,18 @@ class FullInfoTableViewController: UITableViewController {
         personsArray.count
     }
     
-  
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        "\(personsArray[section].name) \(personsArray[section].surName)"
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let name = personsArray[section].name
+        let surName = personsArray[section].surName
+        let fullName = "\(name) \(surName) "
+        return fullName
+    }
+    
+    
 
-    
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         2
     }
@@ -43,10 +48,7 @@ class FullInfoTableViewController: UITableViewController {
         var content = cell.defaultContentConfiguration()
         
         switch indexPath.row {
-        case 0:
-            content.text = person.phone
-           
-            
+        case 0: content.text = person.phone
         default: content.text = person.eMail
         }
         cell.contentConfiguration = content
