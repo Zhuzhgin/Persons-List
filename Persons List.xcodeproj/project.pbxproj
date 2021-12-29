@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		CA34546F277C30F8007751D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34546E277C30F8007751D0 /* AppDelegate.swift */; };
 		CA345471277C30F8007751D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA345470277C30F8007751D0 /* SceneDelegate.swift */; };
-		CA345473277C30F8007751D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA345472277C30F8007751D0 /* ViewController.swift */; };
 		CA345476277C30F8007751D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA345474277C30F8007751D0 /* Main.storyboard */; };
 		CA345478277C3108007751D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA345477277C3108007751D0 /* Assets.xcassets */; };
 		CA34547B277C3108007751D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA345479277C3108007751D0 /* LaunchScreen.storyboard */; };
+		CA345485277C44EB007751D0 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA345484277C44EB007751D0 /* MainTabBarController.swift */; };
+		CA345488277C4A1F007751D0 /* PersonsNamesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA345487277C4A1F007751D0 /* PersonsNamesTableViewController.swift */; };
+		CA34548B277C4E20007751D0 /* FullInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34548A277C4E20007751D0 /* FullInfoTableViewController.swift */; };
+		CA34548E277C4ECE007751D0 /* PersonInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34548D277C4ECE007751D0 /* PersonInfoViewController.swift */; };
+		CA345491277C6641007751D0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA345490277C6641007751D0 /* DataManager.swift */; };
+		CA345498277C6CD1007751D0 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA345497277C6CD1007751D0 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CA34546B277C30F8007751D0 /* Persons List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Persons List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA34546E277C30F8007751D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA345470277C30F8007751D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CA345472277C30F8007751D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CA345475277C30F8007751D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA345477277C3108007751D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA34547A277C3108007751D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA34547C277C3108007751D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA345484277C44EB007751D0 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		CA345487277C4A1F007751D0 /* PersonsNamesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsNamesTableViewController.swift; sourceTree = "<group>"; };
+		CA34548A277C4E20007751D0 /* FullInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullInfoTableViewController.swift; sourceTree = "<group>"; };
+		CA34548D277C4ECE007751D0 /* PersonInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInfoViewController.swift; sourceTree = "<group>"; };
+		CA345490277C6641007751D0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		CA345497277C6CD1007751D0 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +68,13 @@
 			children = (
 				CA34546E277C30F8007751D0 /* AppDelegate.swift */,
 				CA345470277C30F8007751D0 /* SceneDelegate.swift */,
-				CA345472277C30F8007751D0 /* ViewController.swift */,
 				CA345474277C30F8007751D0 /* Main.storyboard */,
+				CA345490277C6641007751D0 /* DataManager.swift */,
+				CA345497277C6CD1007751D0 /* Person.swift */,
+				CA34548D277C4ECE007751D0 /* PersonInfoViewController.swift */,
+				CA34548A277C4E20007751D0 /* FullInfoTableViewController.swift */,
+				CA345484277C44EB007751D0 /* MainTabBarController.swift */,
+				CA345487277C4A1F007751D0 /* PersonsNamesTableViewController.swift */,
 				CA345477277C3108007751D0 /* Assets.xcassets */,
 				CA345479277C3108007751D0 /* LaunchScreen.storyboard */,
 				CA34547C277C3108007751D0 /* Info.plist */,
@@ -137,9 +152,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA345473277C30F8007751D0 /* ViewController.swift in Sources */,
+				CA345491277C6641007751D0 /* DataManager.swift in Sources */,
 				CA34546F277C30F8007751D0 /* AppDelegate.swift in Sources */,
+				CA34548E277C4ECE007751D0 /* PersonInfoViewController.swift in Sources */,
+				CA345488277C4A1F007751D0 /* PersonsNamesTableViewController.swift in Sources */,
+				CA34548B277C4E20007751D0 /* FullInfoTableViewController.swift in Sources */,
 				CA345471277C30F8007751D0 /* SceneDelegate.swift in Sources */,
+				CA345498277C6CD1007751D0 /* Person.swift in Sources */,
+				CA345485277C44EB007751D0 /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
